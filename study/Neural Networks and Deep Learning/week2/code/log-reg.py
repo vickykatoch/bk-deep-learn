@@ -181,7 +181,7 @@ def run_model():
     learning_rate = 0.005
     print_cost = True
     d = model(train_set_x,train_set_y, test_set_x, test_set_y,num_iterations, learning_rate,print_cost)
-    
+
     print(d)
 
 
