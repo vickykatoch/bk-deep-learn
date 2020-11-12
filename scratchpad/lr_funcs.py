@@ -16,3 +16,12 @@ def compute_cost(Yhat, Y, m):
 # Calculates sigmoid of z
 def sigmoid(z):
     return 1 / (1+np.exp(-z))
+
+def propagate(X,Y, W, b):
+    # 1. Compute Z = W.T * X
+    m = X.shape[1]
+    Z = W.T @ X
+    A = sigmoid(Z)
+    cost = compute_cost(A,Y,m)
+
+    return cost
