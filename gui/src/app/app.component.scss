@@ -1,0 +1,12 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    .a-header, .a-footer {
+        background: var(--HEADER-BG);
+        color: var(--HEADER-FG);
+        padding: 0.2em .5em;
+        font-size: 1.2em;
+    }
+}

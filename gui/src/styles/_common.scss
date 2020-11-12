@@ -1,0 +1,20 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    font-size: 14px;
+    overflow: hidden;
+    background: var(--ROOT-BG);
+    color: var(--ROOT-FG);
+}
+
+.h-scoll {
+    overflow-x: auto !important;
+}
+
+.v-scoll {
+    overflow-y: auto !important;
+}
+.no-scroll {
+    overflow: hidden !important;
+}

@@ -126,8 +126,10 @@ def model(X_train, Y_train, X_test, Y_test, num_iterations = 2000, learning_rate
     Y_prediction_train = predict(w, b, X_train)           
 
     # Print train/test Errors
-    print("train accuracy: {} %".format(100 - np.mean(np.abs(Y_prediction_train - Y_train)) * 100))
-    print("test accuracy: {} %".format(100 - np.mean(np.abs(Y_prediction_test - Y_test)) * 100))
+    train_acc = 100 - np.mean(np.abs(Y_prediction_train - Y_train)) * 100
+    test_acc = 100 - np.mean(np.abs(Y_prediction_test - Y_test)) * 100
+    # print("train accuracy: {} %".format(100 - np.mean(np.abs(Y_prediction_train - Y_train)) * 100))
+    # print("test accuracy: {} %".format(100 - np.mean(np.abs(Y_prediction_test - Y_test)) * 100))
 
     d = {"costs": costs,
          "Y_prediction_test": Y_prediction_test, 
@@ -135,6 +137,9 @@ def model(X_train, Y_train, X_test, Y_test, num_iterations = 2000, learning_rate
          "w" : w, 
          "b" : b,
          "learning_rate" : learning_rate,
-         "num_iterations": num_iterations}
+         "num_iterations": num_iterations,
+         "train_acc": train_acc,
+         "test_acc": test_acc
+         }
     
     return d
